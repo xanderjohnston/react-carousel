@@ -16,12 +16,16 @@ const Carousel = ({slides}) => {
     }, []);
 
     const handleRightClick = () => {
-        if (canRight) {setCurrent(currentSlide + 1)}
+        if (canRight) {
+          setCurrent(currentSlide + 1)
+        }
         setPercentage(percentage - 100)
     }
 
     const handleLeftClick = () => {
-        if (canLeft) {setCurrent(currentSlide - 1)}
+        if (canLeft) {
+          setCurrent(currentSlide - 1)
+        }
         setPercentage(percentage + 100)
     }
 
