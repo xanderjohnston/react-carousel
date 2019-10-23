@@ -8,10 +8,12 @@ const Carousel = ({slides}) => {
     const [canLeft, setLeft] = useState(false)
     const [percentage, setPercentage] = useState(0)
     const [height, setHeight] = useState(0);
+    const [width, setWidth] = useState(0);
 
     const measuredRef = useCallback(node => {
       if (node) {
         setHeight(node.scrollHeight);
+        setWidth(node.clientWidth)
       }
     }, []);
 
@@ -56,11 +58,11 @@ const Carousel = ({slides}) => {
                               percentage={(percentage + (i*100))}
                             />
                     })}
-                    <div className={"arrows-container"}>
+                </div>
+                <div className={"arrows-container"} style={{minWidth: `${width + 15}px`}}>
                       {canLeft && <ArrowButton direction={"left"} handleClick={handleLeftClick} />}
                       {canRight && <ArrowButton direction={"right"} handleClick={handleRightClick} />}
                     </div>
-                </div>
             </div>
     
 }
