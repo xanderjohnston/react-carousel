@@ -1,0 +1,11 @@
+import React from 'react';
+import './App.css';
+import Carousel from './Containers/Carousel';
+
+function App() {
+  return (
+    <Carousel />
+  );
+}
+
+export default App;
