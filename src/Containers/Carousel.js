@@ -49,7 +49,7 @@ const Carousel = ({slides}) => {
                     return  <Slide  {...slide} 
                                     selected={currentSlide === i}
                                     checkHeight={measuredRef}
-                                    scaleNumber={findScale(i)}
+                                    scaleDown={findScale(i)}
                                     percentage={(percentage + (i*100))}
                             />
                     })}
