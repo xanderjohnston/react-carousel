@@ -1,3 +1,10 @@
+CSS with overflow-x working:
+
+#app {
+  z-index: 2;
+  position: relative;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -7,8 +14,10 @@ html {
 }
 
 .carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   width: 100%;
-  min-height: 900px;
   max-width: 900px;
   margin: 0 auto;
   position: relative;
@@ -17,16 +26,19 @@ html {
 .slides {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   z-index: 3;
-  /* width: 70vw; */
+  width: 70vw;
   position: relative;
-  transition-duration: 1s;
 }
 
 .slide-image {
+  width: 100%;
   padding-top: 10vh;
-  position: absolute;
-  /* left: 50%; */
+  padding-bottom: 15%;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
   z-index: 3;
   text-align: center;
   transition-duration: 1s;
@@ -48,3 +60,5 @@ html {
 .slide-arrow.left {
 	left: -2rem;
 }
+
+
