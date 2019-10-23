@@ -7,7 +7,7 @@ html {
 }
 
 .carousel {
-  width: 100%;
+  width: 96%;
   min-height: 900px;
   max-width: 900px;
   margin: 0 auto;
@@ -18,7 +18,6 @@ html {
   display: flex;
   flex-direction: row;
   z-index: 3;
-  /* width: 70vw; */
   position: relative;
   transition-duration: 1s;
 }
@@ -26,25 +25,50 @@ html {
 .slide-image {
   padding-top: 10vh;
   position: absolute;
-  /* left: 50%; */
   z-index: 3;
   text-align: center;
   transition-duration: 1s;
 }
 
+.slide-text {
+  transition-duration: 1.3s;
+}
+
+.arrows-container {
+  height: 32px;
+  position: absolute;
+  width: 104%;
+  top: 50%;
+  left: -2%;
+}
+
 .slide-arrow {
 	cursor: pointer;
 	font-size: 2rem;
-	position: absolute;
-  top: 50%;
+	position: relative;
   z-index: 5;
+  opacity: .7;
 }
 
 
 .slide-arrow.right {
-	right: -2rem;
+	float: right;
 }
 
 .slide-arrow.left {
-	left: -2rem;
+	float: left;
+}
+
+.fade-in {
+  animation: fadeIn ease 1.3s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:.7;
+  }
 }

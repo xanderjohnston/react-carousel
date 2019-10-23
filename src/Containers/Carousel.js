@@ -44,16 +44,18 @@ const Carousel = ({slides}) => {
         
     return  <div className={"carousel"} >
                 <div className={"slides"} style={{minHeight: `${height}px`}}>
-                {canLeft && <ArrowButton direction={"left"} handleClick={handleLeftClick} />}
                   {slides.map((slide, i) => {
                     return  <Slide  {...slide} 
-                                    selected={currentSlide === i}
-                                    checkHeight={measuredRef}
-                                    scaleDown={findScale(i)}
-                                    percentage={(percentage + (i*100))}
+                              selected={currentSlide === i}
+                              checkHeight={measuredRef}
+                              scaleDown={findScale(i)}
+                              percentage={(percentage + (i*100))}
                             />
                     })}
-                {canRight && <ArrowButton direction={"right"} handleClick={handleRightClick} />}
+                    <div className={"arrows-container"}>
+                      {canLeft && <ArrowButton direction={"left"} handleClick={handleLeftClick} />}
+                      {canRight && <ArrowButton direction={"right"} handleClick={handleRightClick} />}
+                    </div>
                 </div>
             </div>
     
