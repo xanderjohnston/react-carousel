@@ -1,5 +1,17 @@
 body {
   overflow-x: hidden;
+  font-family: Austin News Deck Semibold,Austin News Deck,Georgia,serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 38px;
+  max-width: 720px;
+  display: block;
+  margin: 0 auto;
+  font-weight: 700;
 }
 
 html {
@@ -11,12 +23,10 @@ html {
   min-height: 900px;
   max-width: 900px;
   margin: 0 auto;
-  position: relative;
+  /* position: relative; */
 }
 
 .slides {
-  display: flex;
-  flex-direction: row;
   z-index: 3;
   position: relative;
   transition-duration: 1s;
