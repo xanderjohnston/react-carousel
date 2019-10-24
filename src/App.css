@@ -31,6 +31,14 @@ html {
   transition-duration: 1s;
 }
 
+.image-wrap {
+  position: relative;
+}
+
+.text-wrap {
+  position: relative;
+}
+
 .slide-image {
   padding-top: 10vh;
   position: absolute;
@@ -39,14 +47,23 @@ html {
   transition-duration: 1s;
 }
 
+.image {
+  width: 98%;
+}
+
 .slide-text {
+  position: absolute;
+  z-index: 3;
+  text-align: center;
   transition-duration: 1.3s;
 }
 
 .arrows-container {
+  padding-top: 5vh;
   height: 32px;
   position: absolute;
   top: 50%;
+  left: -7.5px;
 }
 
 .slide-arrow {
