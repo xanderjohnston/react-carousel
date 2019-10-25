@@ -7,8 +7,8 @@ const Text = ({selected, percentage, title, copy, checkHeight}) => {
   }
 
   return  <div className={"slide-text"} style={transformStyle} ref={selected ? checkHeight : null} >
-            <h3 >{title}</h3>
-            <p >{copy}</p>
+            <h3> {title} </h3>
+            <p> {copy} </p>
           </div>
 }
 

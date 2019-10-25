@@ -1,4 +1,3 @@
-
 export const slides = [
   {id: 0, 
     img: "http://via.placeholder.com/900x585/d3d3d3?text=image%20one", 
